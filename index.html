@@ -17,17 +17,104 @@
         <div class="page-header">
             <h1>Marvel vs DC <small>The Trivia Game</small></h1>
         </div>
+        
         <div id="timer">
         </div>
+        
         <div class="btn-group btn-group-justified" role="group" aria-label="...">
             <div id="replaceBtn" class="btn-group" role="group">
                 <button id="start" type="button" class="btn btn-default">Start</button>
             </div>
         </div>
+        
         <div id="questions" class="hidden">
-            <p>Marvel vs DC</p>
+            <form name="quiz" method="post" name="buttons" id="form" onsubmit="return totalVal()">
+                <li>
+                    <div class="question">What superhero was born with the Curse of Kordax??</div>
+                </li>
+                <input class="answer" type="radio" name="group1" value="wrong"> Ghost Rider
+                <br>
+                <input class="answer" type="radio" name="group1" value="wrong"> Captain Marval
+                <br>
+                <input class="answer" type="radio" name="group1" value="wrong"> Hawkman
+                <br>
+                <input class="answer" type="radio" name="group1" value="correct"> Aquaman
+                <hr>
+                
+                <li>
+                    <div class="question">Which of these superheroines was inhabited by the soul of an ancient Egyptian princess after attempting suicide?</div>
+                </li>
+                <input class="answer" type="radio" name="group2" value="wrong">Black Canary
+                <br>
+                <input class="answer" type="radio" name="group2" value="wrong">Huntress
+                <br>
+                <input class="answer" type="radio" name="group2" value="wrong">Wonder Woman
+                <br>
+                <input class="answer" type="radio" name="group2" value="correct">Hawkgirl
+                <hr>
+                
+                <li>
+                    <div class="question">Who is Luke Cage's best friend and longtime partner in crime-fighting?</div>
+                </li>
+                <input class="answer" type="radio" name="group3" value="wrong">Daredevil
+                <br>
+                <input class="answer" type="radio" name="group3" value="wrong"> Human Torch
+                <br>
+                <input class="answer" type="radio" name="group3" value="wrong"> Doctor Strange
+                <br>
+                <input class="answer" type="radio" name="group3" value="correct">Iron Fist
+                <hr>
+               
+                <li>
+                    <div class="question">What superhero team has She-Hulk NOT been a member of?</div>
+                </li>
+                <input class="answer" type="radio" name="group4" value="wrong"> Avenger
+                <br>
+                <input class="answer" type="radio" name="group4" value="wrong"> Captain Marval
+                <br>
+                <input class="answer" type="radio" name="group4" value="wrong"> Hawkman
+                <br>
+                <input class="answer" type="radio" name="group4" value="correct"> Aquaman
+                <hr>
+               
+                <li>
+                    <div class="question">Who was the first costumed superhero?</div>
+                </li>
+                <input class="answer" type="radio" name="group5" value="wrong">Superman
+                <br>
+                <input class="answer" type="radio" name="group5" value="wrong">Arrow
+                <br>
+                <input class="answer" type="radio" name="group5" value="wrong">Crimson Avenger
+                <br>
+                <input class="answer" type="radio" name="group5" value="correct">The Phantom
+                <hr>
+                
+                <li>
+                    <div class="question">What is the best-selling comic book of all time?</div>
+                </li>
+                <input class="answer" type="radio" name="group6" value="wrong">Batman #428
+                <br>
+                <input class="answer" type="radio" name="group6" value="wrong"> Superman #75
+                <br>
+                <input class="answer" type="radio" name="group6" value="wrong"> Amazing Spiderman #583
+                <br>
+                <input class="answer" type="radio" name="group6" value="correct">X-Men #1 
+                <hr>
+                
+                <button class="submit">Submit</button>
+        </form>
         </div>
-    </div>
+        
+        <div>
+        <h2>All Done!</h2>
+        <p>Correct Answers: <span id="correct"></span></p>
+    	<p>Incorrect Answers: <span id="incorrect"></span></p>
+    	<p>Unaswered: <span id="unanswered"></span></p>
+        </div>
+
+        
+        </div>
+
     <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
     <script type="text/javascript" src="assets/javascript/app.js">
     </script>

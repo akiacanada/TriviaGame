@@ -30,6 +30,13 @@ function unhide() {
     }
 }
 
+function secondUnhide() {
+    var item = document.getElementById("results");
+    if (item) {
+        item.className = (item.className == 'hidden') ? 'unhidden' : 'hidden';
+    }
+}
+
 
 function start() {
     intervalId = setInterval(count, 1000);
@@ -46,6 +53,7 @@ function count() {
         clearInterval(intervalId);
         alert("Time's Up");
         answerCount();
+        secondUnhide() 
     }
 
 }
@@ -91,6 +99,7 @@ $(".submit").on("click", function(event){
   answerCount();
   console.log (correct.innerHTML);
   console.log(incorrect.innerHTML);
-  
+  $("#questions").html($("#results"));
+  secondUnhide() 
 
 })
